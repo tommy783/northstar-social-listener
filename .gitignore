@@ -1,0 +1,6 @@
+.env
+raw/
+data/
+_old_attempt/
+__pycache__/
+.DS_Store
