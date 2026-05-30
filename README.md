@@ -17,13 +17,22 @@ roughly **$0.60–1.00**, so the practical cadence is **about once a month**
 (the budget resets on the 28th). To run more often (e.g. weekly/daily),
 upgrade the Apify plan at https://console.apify.com/billing/subscription.
 
+## Live shareable dashboard
+Published free via GitHub Pages:
+**https://tommy783.github.io/northstar-social-listener/**
+(Repo: https://github.com/tommy783/northstar-social-listener — public.)
+
 ## To run
-Double-click **`Refresh Dashboard.command`**, or in a terminal:
+Double-click **`Refresh Dashboard.command`**. It scrapes fresh posts, rebuilds
+the dashboard, opens it locally, and **pushes the update to the live link** so
+your shared URL refreshes too.
+
+Or in a terminal:
 ```
 python3 listen.py          # scrape everything + rebuild dashboard
 python3 listen.py --build  # rebuild from last scrape only (free, no token)
+git add -A && git commit -m "refresh" && git push   # update the live link
 ```
-Then open `dashboard.html` in any browser.
 
 ## Notes
 - Token lives in `.env` (already set up). No `pip install` needed.
